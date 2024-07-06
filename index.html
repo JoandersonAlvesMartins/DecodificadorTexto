@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Joanderson Alves Martins">
+    <meta name="description" content="Decodificar texto">
+    <meta name="keywords" contetent="HTML5, CSS3, JavaScript">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="./public/img's/fechadura.png">
+    <title>Decodificar Texto</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="codificar">
+        <textarea
+          name="texto"
+          class="texto"
+          id="texto"
+          cols="30"
+          rows="10"
+          placeholder="Inserir texto aqui"
+          border-color
+        ></textarea>
+        <div class="termo">
+          <p>Apenas letras minusculas e sem acento</p>
+        </div>
+        <div class="btn">
+          <button class="btn-codificar" type="button" onclick="codificarTexto()">
+            codificar
+          </button>
+          <input
+            class="btn-descodificar"
+            type="button"
+            onclick="decodificarTexto()"
+            value="Descodificar"
+          />
+        </div>
+      </div>
+      <div class="codificado">
+        <img src="./public/img's/boneco.png" id="boneco" alt="imagem de um boneco" />
+        <div class="mensage-codificada" id="mensage-codificada">
+          <h2 id="titulo-mensage">Ningún mensaje fue encontrado</h2>
+          <p id="paragrafo">
+            Ingresa el texto que deseas codificar
+          </p>
+          <textarea
+            name="mensage"
+            id="mensage"
+            cols="30"
+            rows="10"
+            class="mensage"
+            id="mensage"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+  </body>
+<script src="./assets/js/codificarTexto.js"></script>
+<script src="./assets/js/decodificarTexto.js"></script>
+</html>
