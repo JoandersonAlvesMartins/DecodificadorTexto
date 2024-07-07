@@ -1,12 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Inter:wght@400;700&display=swap");
-
-
 * {
-  margin: 0px;
   padding: 0px;
+  margin: 0px;
   box-sizing: border-box;
 }
+
 
 :root {
   --main-font: 'Inter', sans-serif;
@@ -15,23 +12,24 @@
   --aside-title: #000000;
   --placeholder-color: #2C39F9;
   --textarea-text-color: #2C39F9;
-
+  
   --social-media-color: invert(0);
   --is-icon-black: invert(0);
   --is-icon-black-hover: (0);
   --is-icon-white: invert(0);
   --is-icon-white-hover: invert(1);
 
+
   --button-encrypt-background-color: #2C39F9;
   --button-encrypt-border-color: #000;
   --button-encrypt-font-color: #FFFFFF; 
-  --button-descrypt-background-color: #6bee37;
+  --button-descrypt-background-color: #0ace25;
   --button-descrypt-font-color: #000000;
 
   --button-toggle-background-color: #FDFDFD;
   --body-background-color: #E2E2E2;
   --menu-background-color: #FDFDFD;
-  --border-theme-light: #2C39F9;
+  --border-theme-light: #7b17be;
   --box-background-color: #FDFDFD;
   --box-shadow: 0px 0px 5px rgba(106, 115, 255, 0.5);
   --image-shadow: linear-gradient(180deg, rgba(217, 217, 217, 0) 27.36%, #FFFFFF 100%);
@@ -39,55 +37,57 @@
   --dropdown-text-color-hover: #FFFFFF;
   --warning-text-color: #383E43;
   --main-link-color: #000000;
-
+  
   --button-encrypt-background-color-hover: #1B24B0;
-  --button-descrypy-background-color-hover: #00f529;
+  --button-descrypy-background-color-hover: #08f500;
   --aside-display-border-color-hover: #1B24B0;
   --button-copy-background-color-hover: #1B24B0;
   --scroolbar-track-color: #9598c6;
-
+  
   font-size: 62.5%;
 
 }
 
+
 :root.dark {
   --header-title: #FFFFFF;
-    --aside-title: #F8FBFF;
-    --placeholder-color: #02C171;
-    --textarea-text-color: #02C171;
-    --social-media-color: invert(1);
+  --aside-title: #F8FBFF;
+  --placeholder-color: #02C171;
+  --textarea-text-color: #02C171;
+  --social-media-color: invert(1);
 
-    --is-icon-black: invert(1);
-    --is-icon-black-hover: (1);
-    --is-icon-white: invert(1);
-    --is-icon-white-hover: invert(0);
+  --is-icon-black: invert(1);
+  --is-icon-black-hover: (1);
+  --is-icon-white: invert(1);
+  --is-icon-white-hover: invert(0);
 
-    --button-encrypt-background-color: #02C171;
-    --button-encrypt-border-color: #000000;
-    --button-encrypt-font-color: #00000; 
-    
-    --button-descrypt-background-color: #C31D27;
-    --button-descrypt-font-color: #FFFFFF;
-    
-    --button-toggle-background-color: #050E0C;
-    --body-background-color: #aa089d;
-    --menu-background-color: #050E0C;
-    --border-theme-light: #02C171;
-    --box-background-color: #050E0C;
-    --box-shadow: 0px 0px 5px rgba(2, 193, 113, 0.5);
-    --image-shadow: linear-gradient(180deg, rgba(5, 14, 12, 0) 27.36%, #050E0C 100%);
-    --dropdown-hover: #02C171;
-    --dropdown-text-color-hover: #FFFFFF;
-    --warning-text-color: #EDEDED;
-    --main-link-color: #FFFFFF;
-    
-    --button-encrypt-background-color-hover: #00FF87;
-    --button-descrypy-background-color-hover: #14f500;
-    --button-descrypt-font-color-hover: #000000;
+  --button-encrypt-background-color: #02C171;
+  --button-encrypt-border-color: #000000;
+  --button-encrypt-font-color: #00000; 
+  
+  --button-descrypt-background-color: #a7116d;
+  --button-descrypt-font-color: #FFFFFF;
+  
+  --button-toggle-background-color: #050E0C;
+  --body-background-color: #0F0F0F;
+  --menu-background-color: #050E0C;
+  --border-theme-light: #02C171;
+  --box-background-color: #050E0C;
+  --box-shadow: 0px 0px 5px rgba(2, 193, 113, 0.5);
+  --image-shadow: linear-gradient(180deg, rgba(5, 14, 12, 0) 27.36%, #050E0C 100%);
+  --dropdown-hover: #02C171;
+  --dropdown-text-color-hover: #FFFFFF;
+  --warning-text-color: #EDEDED;
+  --main-link-color: #FFFFFF;
+  
+  --button-encrypt-background-color-hover: #00FF87;
+  --button-descrypy-background-color-hover: #f5008f;
+  --button-descrypt-font-color-hover: #000000;
 
-    --aside-display-border-color-hover: #00FF87;
-    --button-copy-background-color-hover: #00FF87;
-    --scroolbar-track-color: #004233;
+  --aside-display-border-color-hover: #00FF87;
+  --button-copy-background-color-hover: #00FF87;
+  --scroolbar-track-color: #004233;
+
 }
 
 body {
@@ -98,6 +98,7 @@ body {
   display: flex;
   flex-flow: column;
   gap: 2.6rem;
+
 }
 
 .main {
@@ -136,6 +137,7 @@ body {
   padding-left: 1.9rem;
   left: 70%;
   opacity: 0;
+
   overflow: hidden;
 }
 
@@ -158,6 +160,7 @@ body {
   border: 0.1rem solid var(--border-theme-light);
   position: absolute;
   top: 1.2rem;
+
   transform: translateX(-0.7rem) rotate(50deg);
   box-shadow: var(--box-shadow);
 }
@@ -170,18 +173,23 @@ body {
   border-radius: 1.0rem;
   box-shadow: var(--box-shadow);
   overflow: hidden;
+
   display: flex;
   flex-direction: column;
   position: relative;
   z-index: 2;
+
   height: 100%;
 }
+
+
 
 .main__link {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
+
   padding: 1.0rem 1.5rem;
   text-decoration: none;
   color: var(--main-link-color);
@@ -205,25 +213,6 @@ body {
   font-size: 1.8rem;
   text-align: center;
   color: var(--header-title);
-}
-
-.is-btn-small {
-  box-shadow: var(--box-shadow);
-  border: .1rem solid var(--border-theme-light);
-  background-color: var(--box-background-color);
-  border-radius: 0.5rem;
-
-  display: grid;
-  place-content: center;
-  cursor: pointer;
-}
-
-.is-btn-small:hover {
-  box-shadow: none;
-}
-
-:where(.main__item, .is-btn-small):hover {
-  background-color: var(--dropdown-hover);
 }
 
 .is-icon-svg {
@@ -255,6 +244,7 @@ body {
   background-color: var(--box-background-color);
   box-shadow: var(--box-shadow);
   padding: 1.6rem;
+
   flex-basis: 37rem;
 }
 
@@ -343,6 +333,7 @@ body {
   
 }
 
+
 /* Estilos do Aside */
 .aside {
   display: flex;
@@ -352,10 +343,6 @@ body {
 .aside__header {
   display: flex;
   justify-content: space-between;
-}
-
-.is-icon-figma {
-  padding: 1.4rem 1.8rem;
 }
 
 .aside__checkbox {
