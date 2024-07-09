@@ -151,8 +151,7 @@ function pasteText() {
     } catch {
         
         alert("Erro: seu navegador não é compativel com a função de colar ou você não deu as permissões necessárias, use o atalho CRTL+V para colocar o texto cópiado");
-    }
-                  
+    }    
 
 }
 
@@ -164,12 +163,12 @@ function openAndCloseFullScreen(){
 
     if(fullScreen) {
         document.exitFullscreen();
-        img.src = "./assets/icons-svg/full-screen.svg"
+        img.src = "public/img's/icon-svg's/full-screen.svg"
         fullScreen = false;
 
     } else {
         html.requestFullscreen();
-        img.src = "./assets/icons-svg/full-screen-exit.svg"
+        img.src = "public/img's/icon-svg's/full-screen-exit.svg"
         fullScreen = true;
     }
 }
@@ -179,3 +178,49 @@ buttonEncrypt.addEventListener("click", checkLowerCase);
 buttonDescrypt.addEventListener("click", descryptText);
 buttonCopy.addEventListener("click", copyText);
 buttonFullScreen.addEventListener("click", openAndCloseFullScreen);
+
+function translatePage() {
+  const select = document.getElementById('language-selector');
+  const language = select.value;
+
+  const elementsToTranslate = document.querySelectorAll('#main-content p, #main-content h1, #main-content h2, #main-content h3, #main-content h4, #main-content h5, #main-content h6');
+
+  elementsToTranslate.forEach(element => {
+      const text = element.innerText;
+      translateText(text, language)
+          .then(translatedText => {
+              element.innerText = translatedText;
+          })
+          .catch(error => console.error('Erro ao traduzir elemento:', error));
+  });
+}
+
+async function translateText(text, targetLanguage) {
+  const apiKey = 'YOUR_GOOGLE_TRANSLATE_API_KEY'; // Obtenha sua chave de API do Google Translate
+  const endpoint = `https://translation.googleapis.com/language/translate/v2?key=${apiKey}`;
+
+  const data = {
+      q: text,
+      target: targetLanguage
+  };
+
+  try {
+      const response = await fetch(endpoint, {
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: {
+              'Content-Type': 'application/json'
+          }
+      });
+
+      if (!response.ok) {
+          throw new Error('Erro ao traduzir texto');
+      }
+
+      const translatedData = await response.json();
+      return translatedData.data.translations[0].translatedText;
+  } catch (error) {
+      console.error('Erro ao traduzir texto:', error);
+      return text; // Retorna o texto original em caso de erro
+  }
+}

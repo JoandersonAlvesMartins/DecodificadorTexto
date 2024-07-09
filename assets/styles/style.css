@@ -23,13 +23,13 @@
   --button-encrypt-background-color: #2C39F9;
   --button-encrypt-border-color: #000;
   --button-encrypt-font-color: #FFFFFF; 
-  --button-descrypt-background-color: #0ace25;
+  --button-descrypt-background-color: #11c23e;
   --button-descrypt-font-color: #000000;
 
   --button-toggle-background-color: #FDFDFD;
   --body-background-color: #E2E2E2;
   --menu-background-color: #FDFDFD;
-  --border-theme-light: #7b17be;
+  --border-theme-light: #c40dc4;
   --box-background-color: #FDFDFD;
   --box-shadow: 0px 0px 5px rgba(106, 115, 255, 0.5);
   --image-shadow: linear-gradient(180deg, rgba(217, 217, 217, 0) 27.36%, #FFFFFF 100%);
@@ -39,8 +39,8 @@
   --main-link-color: #000000;
   
   --button-encrypt-background-color-hover: #1B24B0;
-  --button-descrypy-background-color-hover: #08f500;
-  --aside-display-border-color-hover: #1B24B0;
+  --button-descrypy-background-color-hover: #00f529;
+  --aside-display-border-color-hover: #c40dc4;
   --button-copy-background-color-hover: #1B24B0;
   --scroolbar-track-color: #9598c6;
   
@@ -65,7 +65,7 @@
   --button-encrypt-border-color: #000000;
   --button-encrypt-font-color: #00000; 
   
-  --button-descrypt-background-color: #a7116d;
+  --button-descrypt-background-color: #790a4a;
   --button-descrypt-font-color: #FFFFFF;
   
   --button-toggle-background-color: #050E0C;
@@ -81,7 +81,7 @@
   --main-link-color: #FFFFFF;
   
   --button-encrypt-background-color-hover: #00FF87;
-  --button-descrypy-background-color-hover: #f5008f;
+  --button-descrypy-background-color-hover: #cf1391;
   --button-descrypt-font-color-hover: #000000;
 
   --aside-display-border-color-hover: #00FF87;
@@ -215,6 +215,25 @@ body {
   color: var(--header-title);
 }
 
+.is-btn-small {
+  box-shadow: var(--box-shadow);
+  border: .1rem solid var(--border-theme-light);
+  background-color: var(--box-background-color);
+  border-radius: 0.5rem;
+
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+.is-btn-small:hover {
+  box-shadow: none;
+}
+
+:where(.main__item, .is-btn-small):hover {
+  background-color: var(--dropdown-hover);
+}
+
 .is-icon-svg {
   padding: 1rem;
 }
@@ -343,6 +362,10 @@ body {
 .aside__header {
   display: flex;
   justify-content: space-between;
+}
+
+.is-icon-figma {
+  padding: 1.4rem 1.8rem;
 }
 
 .aside__checkbox {
@@ -495,7 +518,7 @@ body {
   }
 
   .main__image {
-      width: 5rem;
+      width: 7rem;
   }
 
   .main__title {
@@ -514,4 +537,10 @@ body {
   .aside {
       width: 34rem;
   }
+}
+
+#translator {
+  padding: 1em;
+  margin-bottom: 1em;
+  text-align: center;
 }
