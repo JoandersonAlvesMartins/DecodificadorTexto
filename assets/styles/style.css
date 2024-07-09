@@ -190,68 +190,68 @@
     display: flex;
     flex-direction: row;
   }
-  
+
   .codificar {
     width: 100%;
   }
-  
+
   .texto {
     width: 80%;
     height: 60%;
     left: 10%;
     top: 5%;
   }
-  
+
   .termo {
     width: 80%;
     left: 10%;
     top: 67%;
   }
-  
+
   .termo p {
     font-size: 16px;
   }
-  
+
   .btn {
     width: 80%;
     left: 10%;
     top: 70%;
   }
-  
+
   .btn-codificar,
   .btn-descodificar {
     width: 48%;
     border-radius: 16px;
   }
-  
+
   .btn-descodificar {
     width: 48%;
     border-radius: 16px;
   }
-  
+
   .btn-descodificar:hover,
   .btn-codificar:hover {
     margin: 0.3%;
     width: 47.5%;
     padding: 1.8%;
   }
-  
+
   .codificado {
     width: 80%;
     height: 15%;
     left: 10%;
     top: 80%;
   }
-  
+
   .mensage-codificada {
     width: 100%;
     top: 5%;
   }
-  
+
   .mensage-codificada p {
     width: 80%;
   }
-  
+
   .codificado img {
     top: 0;
     display: none;

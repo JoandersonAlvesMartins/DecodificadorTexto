@@ -1,4 +1,3 @@
-
 function decodificarTexto() {
   let text = document.getElementById("texto").value;
   let titleMessage = document.getElementById("titulo-mensage");
