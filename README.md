@@ -214,7 +214,7 @@ Para a criação desse projeto foram aplicadas 3 métodologias
 2. Outro ponto foi a confusão que tive com as classes, já que essa foi a minha primeira vez que coloquei em prática o que estudei de BEM e NAMESPACE, por isso, tivesse dúvidas se estava fazendo certo, o que também foi outro responsável pela demora do desenvolvimento.
 3. Na funcionalidade de colar o texto da área de tranferência ocorre um problema no firefox, onde não é possível colar, no Chrome é possível colar, mas antes é necessário permitr essa ação, mas mesmo permitindo, há casos que ainda assim, o texto não é colado automaticamente e é preciso recorrer ao atalho CRTL + V.
 <p align="center" >
-    <img src="public/img's/clipboard.png" alt="Pop-ups pedindo permição para ler a área de tranferência">
+    <img src="public/img's/clipboard.jpg" alt="Pop-ups pedindo permição para ler a área de tranferência">
 </p>
 
 ### 🛠️ Possível Solução
